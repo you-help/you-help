@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking System</title>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body onload="loader()">
+    <!-- loader for splash screen -->
+    <div id="loading"></div>
+
+    <!--Navbar Starts Here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">SPARKS Bank</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav navbar-right ml-auto">
+            <li>
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./customers.html">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./transfer.html">Transfer Money</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends here  -->
+
+    <!-- here content starts here -->
+    <div class="container-fluid hero-content">
+      <div class="main row align-items-center">
+        <div class="col-md-6 col-sm-12 text-center" data-aos="fade-up">
+          <h1 class="section-title"
+          style="color: #0d11eb; font-weight: bolder; text-align: center">THE HUMAN BANK</h1>
+          <h1>
+            Easiest Way to
+            <span id="sp" class="font-weight-bold">Transfer Money</span>
+          </h1>
+          <p class="lead muted">
+            TRANSFER MONEY
+            <span id="sp" class="font-weight-bold">IN SECONDS</span>
+          </p>
+
+          <br />
+          <br />
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="location.href = './customers.html';"
+          >
+            Customer Details
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="location.href = './transfer.html';"
+          >
+            Transfer Money
+          </button>
+        </div>
+        <div class="col-md-6 col-sm-12 text-center" data-aos="fade-left">
+          <div class="hero-img-div">
+            <img
+              class="hero-img"
+              src="data:image/jpeg;base64,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"
+              alt="img-showing-money-transfer"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- here content ends here -->
+
+    <!--===== ABOUT =====-->
+    <section class="about section" id="about">
+      <h2
+        class="section-title"
+        style="color: #0b0d0e; font-weight: bolder; text-align: center"
+      >
+        About
+      </h2>
+
+      <div class="about__container bd-grid">
+        <div class="about__img">
+          <img
+            src="C:\Users\HP\Downloads\Abhay Tiwari\Abhay Tiwari\Sparks_Human Bank\SPARKS_Bank-master\money-3630935_1280.png"
+            alt=""
+            style="
+              width: 450px;
+              height: 250px;
+              border-radius: 14%;
+              margin-left: 200px;
+              display: inline-block;
+              vertical-align: middle;
+              float: left;
+            "
+          />
+        </div>
+        <div>
+          <h3
+            class="about__subtitle"
+            style="margin-left: 700px; margin-top: 50px; font-weight: bolder"
+          >
+            Welcome to Sparks Bank
+          </h3>
+          
+          <p class="about__text" style="margin-left: 700px">Always at your Service!</p>
+
+          <p class="about__text" style="margin-left: 700px">
+            We provide loans, accept deposits and best results!
+            </p>
+          <p class="about__text" style="margin-left: 700px">EASY TRANSACTION IN SECONDS!</p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="bg-light text-center text-lg-start"
+      style="margin-top: 300px"
+      margin-top="20px"
+    >
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgb(195, 211, 238)"
+      >
+        © 2021 Copyright:
+        <p class="love">
+          All Rights Reserved to Abhay Tiwari
+        </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- spalsh screen js -->
+    <script>
+      var preloader = document.getElementById("loading");
+      function loader() {
+        preloader.style.display = "none";
+      }
+    </script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+    <!-- aos data  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ 
+        duration: 700,
+      });
+    </script>
+  </body>
+</html>
